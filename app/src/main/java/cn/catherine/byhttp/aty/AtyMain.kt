@@ -16,8 +16,6 @@ class AtyMain : AppCompatActivity() {
     private var count: Int = 0
     var downloadHandler = Handler {
         var result = it.what
-        println("----$result")
-
         count += result
         textview.text = if (count >= 3) "download success!" else count.toString()
 
